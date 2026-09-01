@@ -18,3 +18,6 @@ if (generatedNumber === 1) {
     }
 }
 
+//Create a function called getHumanChoice
+//Initialise variable with user choice
+//Return user choice
