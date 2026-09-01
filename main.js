@@ -2,7 +2,7 @@
 function getComputerChoice() {
 
     //Initialise a variable with a randomly generated number between 1 and 3
-    generatedNumber = Math.floor(Math.random() * 3) + 1;
+    let generatedNumber = Math.floor(Math.random() * 3) + 1;
 
     //If number is 1, return rock
     if (generatedNumber === 1) {
@@ -22,7 +22,7 @@ function getComputerChoice() {
 function getHumanChoice() {
 
     //Initialise variable with user choice
-    userChoice = prompt("Please enter your choice");
+    let userChoice = prompt("Please enter your choice");
 
     //Return user choice
     return userChoice;
