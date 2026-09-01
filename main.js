@@ -19,5 +19,11 @@ if (generatedNumber === 1) {
 }
 
 //Create a function called getHumanChoice
+function getHumanChoice() {
+
 //Initialise variable with user choice
+userChoice = prompt("Please enter your choice");
+
 //Return user choice
+return userChoice;
+}
