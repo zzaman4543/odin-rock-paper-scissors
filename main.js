@@ -1,6 +1,7 @@
 //Initialise variable for human score with value of 0
+let humanScore = 0;
 //Initialise variable for computer score with value of 0
-
+let computerScore = 0;
 
 //Create a function called getComputerChoice
 function getComputerChoice() {
