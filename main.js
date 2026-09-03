@@ -1,3 +1,7 @@
+//Initialise variable for human score with value of 0
+//Initialise variable for computer score with value of 0
+
+
 //Create a function called getComputerChoice
 function getComputerChoice() {
 
