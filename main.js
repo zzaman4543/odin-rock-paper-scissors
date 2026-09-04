@@ -34,13 +34,7 @@ function getHumanChoice() {
 }
 
 //Create a function named playRound with humanChoice and computerChoice parameters
-    //Initialise variable with uppercase first letter of humanChoice
-    //Initialise variable with rest of humanChoice as lowercase
     //Initialise variable with capitalised humanChoice
-
-
-    //Initialise variable with uppercase first letter of computerChoice
-    //Initialise variable with rest of computerChoice as lowercase
     //Initialise variable with capitalised computerChoice
     
 
