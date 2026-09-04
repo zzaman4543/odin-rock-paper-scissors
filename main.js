@@ -32,3 +32,20 @@ function getHumanChoice() {
     //Return user choice
     return userChoice;
 }
+
+//Create a function named playRound with humanChoice and computerChoice parameters
+    //Initialise variable to store humanChoice with first letter capitalised
+    //Initialise variable to store computerChoice with first letter capitalised
+
+    //If choices are the same
+        //Output tie message with choices
+
+    /*Otherwise if humanChoice is rock AND computerChoice is scissors OR 
+    humanChoice is paper AND computerChoice is rock OR 
+    humanChoice is scissors AND computerChoice is paper*/
+        //Output winner message with choices
+        //Increment human score
+
+    //Otherwise
+        //Output loser message with choices
+        //Increment computer score
