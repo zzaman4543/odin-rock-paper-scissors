@@ -11,15 +11,15 @@ function getComputerChoice() {
 
     //If number is 1, return rock
     if (generatedNumber === 1) {
-        return "rock";
+        return "Rock";
 
     //If number is 2, return paper
     } else if (generatedNumber === 2) {
-        return "paper";
+        return "Paper";
 
     //If number is 3, return scissors
     } else {
-        return "scissors";
+        return "Scissors";
     }
 }
 
@@ -38,8 +38,8 @@ function playRound(humanChoice, computerChoice) {
 
     //Initialise variable with capitalised humanChoice
     let capitalHumanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.substring(1).toLowerCase();
-    //Initialise variable with capitalised computerChoice
-    let capitalComputerChoice = computerChoice.charAt(0).toUpperCase() + computerChoice.substring(1).toLowerCase();
+    //Initialise variable with already capitalised computerChoice
+    let capitalComputerChoice = computerChoice;
 
     //If choices are the same
     if (capitalHumanChoice === capitalComputerChoice) {
@@ -65,5 +65,3 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
     }
 }
-
-
