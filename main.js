@@ -34,20 +34,36 @@ function getHumanChoice() {
 }
 
 //Create a function named playRound with humanChoice and computerChoice parameters
+function playRound(humanChoice, computerChoice) {
+
     //Initialise variable with capitalised humanChoice
+    let capitalHumanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.substring(1).toLowerCase();
     //Initialise variable with capitalised computerChoice
-    
+    let capitalComputerChoice = computerChoice.charAt(0).toUpperCase() + computerChoice.substring(1).toLowerCase();
 
     //If choices are the same
+    if (capitalHumanChoice === capitalComputerChoice) {
         //Output tie message with choices
+        console.log(`You tied. You both chose ${capitalHumanChoice}.`);
 
-    /*Otherwise if humanChoice is rock AND computerChoice is scissors OR 
-    humanChoice is paper AND computerChoice is rock OR 
-    humanChoice is scissors AND computerChoice is paper*/
+    /*Otherwise if humanChoice is Rock AND computerChoice is Scissors OR 
+    humanChoice is Paper AND computerChoice is Rock OR 
+    humanChoice is Scissors AND computerChoice is Paper*/
+    } else if (capitalHumanChoice === "Rock" && capitalComputerChoice === "Scissors" ||
+               capitalHumanChoice === "Paper" && capitalComputerChoice === "Rock" ||
+               capitalHumanChoice === "Scissors" && capitalComputerChoice === "Paper") {
         //Output winner message with choices
+        console.log(`You won. ${capitalHumanChoice} beats ${capitalComputerChoice}.`);
         //Increment human score
-
+        humanScore++;
+    
     //Otherwise
+    } else {
         //Output loser message with choices
+        console.log(`You lost. ${capitalComputerChoice} beats ${capitalHumanChoice}.`);
         //Increment computer score
+        computerScore++;
+    }
 }
+
+
