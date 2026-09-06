@@ -65,3 +65,22 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
     }
 }
+
+//Create a function named playGame with playRound function and score variables (outside playRound) inside
+    //Create a variable for human selection
+    //Create a variable for computer selection
+
+    //For five times
+        //Assign humanSelection a value by calling getHumanChoice
+        //Assign computerSelection a value by calling getComputerChoice
+        //Call playRound function with humanSelection and computerSection as arguments
+    //End
+    
+    //If humanScore is greater than computerScore
+        //Output human winner message with final scores
+    //Otherwise
+        //Output computer winner message with final scores
+    //End
+//End
+   
+
