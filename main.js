@@ -73,6 +73,8 @@ function playGame() {
             //Increment computer score
             computerScore++;
         }
+        //Output round score
+        console.log(`You have ${humanScore} points. Computer has ${computerScore} points.`);
     }
 
     //For five times
@@ -82,7 +84,7 @@ function playGame() {
 
         //Assign computerSelection a value by calling getComputerChoice
         computerSelection = getComputerChoice();
-        
+
         //Call playRound function with humanSelection and computerSection as arguments
         playRound(humanSelection, computerSelection)
     }
