@@ -74,7 +74,8 @@ function playGame() {
             computerScore++;
         }
         //Output round score
-        console.log(`You have ${humanScore} points. Computer has ${computerScore} points.`);
+        console.log(`You: ${humanScore}`);
+        console.log(`Computer: ${computerScore}`);
     }
 
     //For five times
@@ -91,19 +92,21 @@ function playGame() {
     
     //If humanScore is the same as computerScore
     if (humanScore === computerScore) {
-        //Output tie message with final scores
-        console.log(`You tied. You and Computer both scored ${humanScore} points.`);
+        //Output tie message
+        console.log('You tied.');
 
     //Otherwise if humanScore is greater than computerScore
     } else if (humanScore > computerScore) { 
-        //Output human winner message with final scores
-        console.log(`You win. You scored ${humanScore} points. Computer scored ${computerScore} points.`);
-    
+        //Output human winner message
+        console.log('You win.');
     //Otherwise
     } else {
-        //Output computer winner message with final scores
-        console.log(`Computer wins. Computer scored ${computerScore} points. You scored ${humanScore} points.`);
+        //Output computer winner message
+        console.log('Computer wins.');
     }
+    //Output final scores
+    console.log(`You: ${humanScore}`);
+    console.log(`Computer: ${computerScore}`);
 }
    
 
