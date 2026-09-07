@@ -99,14 +99,12 @@ function playGame() {
     } else if (humanScore > computerScore) { 
         //Output human winner message
         console.log('You win.');
+        
     //Otherwise
     } else {
         //Output computer winner message
         console.log('Computer wins.');
     }
-    //Output final scores
-    console.log(`You: ${humanScore}`);
-    console.log(`Computer: ${computerScore}`);
 }
    
 
