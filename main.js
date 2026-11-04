@@ -46,4 +46,11 @@ function playGame() {
     }
 }
    
+const btnRock = document.getElementById("rock");
+const btnPaper = document.getElementById("paper");
+const btnScissors = document.getElementById("scissors");
+
+btnRock.addEventListener("click", playRound("Rock"));
+btnPaper.addEventListener("click", playRound("Paper"));
+btnScissors.addEventListener("click", playRound("Scissors"));
 
