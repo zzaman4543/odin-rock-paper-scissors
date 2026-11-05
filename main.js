@@ -10,11 +10,6 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let userChoice = prompt("Please enter your choice");
-    return userChoice;
-}
-
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
@@ -30,21 +25,20 @@ function playGame() {
 
 
     function playRound(humanChoice) {
-        let capitalHumanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.substring(1).toLowerCase();
         let computerChoice = getComputerChoice();
 
-        if (capitalHumanChoice === computerChoice) {
-            result.textContent = `You tied. You both chose ${capitalHumanChoice}.`;
+        if (humanChoice === computerChoice) {
+            result.textContent = `You tied. You both chose ${humanChoice}.`;
 
-        } else if (capitalHumanChoice === "Rock" && computerChoice === "Scissors" ||
-                capitalHumanChoice === "Paper" && computerChoice === "Rock" ||
-                capitalHumanChoice === "Scissors" && computerChoice === "Paper") {
+        } else if (humanChoice === "Rock" && computerChoice === "Scissors" ||
+                humanChoice === "Paper" && computerChoice === "Rock" ||
+                humanChoice === "Scissors" && computerChoice === "Paper") {
 
-            result.textContent = `You won. ${capitalHumanChoice} beats ${computerChoice}.`;
+            result.textContent = `You won. ${humanChoice} beats ${computerChoice}.`;
             humanScore++;
 
         } else {
-            result.textContent = `You lost. ${capitalHumanChoice} is beaten by ${computerChoice}.`;
+            result.textContent = `You lost. ${humanChoice} is beaten by ${computerChoice}.`;
             computerScore++;
         }
         
