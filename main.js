@@ -1,12 +1,16 @@
 function getComputerChoice() {
-    let generatedNumber = Math.floor(Math.random() * 3) + 1;
+    let generatedNumber = Math.floor(Math.random() * 3);
 
-    if (generatedNumber === 1) {
-        return "Rock";
-    } else if (generatedNumber === 2) {
-        return "Paper";
-    } else {
-        return "Scissors";
+    switch (generatedNumber) {
+        case 0:
+            return "Rock";
+            break; 
+        case 1:
+            return "Paper";
+            break;
+        case 2:
+            return "Scissors";
+            break;
     }
 }
 
