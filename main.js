@@ -11,9 +11,16 @@ function getComputerChoice() {
 }
 
 function playGame() {
+    const btnRock = document.getElementById("rock");
+    const btnPaper = document.getElementById("paper");
+    const btnScissors = document.getElementById("scissors");
+
+    btnRock.addEventListener("click", playRound("Rock"));
+    btnPaper.addEventListener("click", playRound("Paper"));
+    btnScissors.addEventListener("click", playRound("Scissors"));
+
     let humanScore = 0;
     let computerScore = 0;
-    let roundsPlayed = 0;
 
     let humanSelection;
     let computerSelection;
@@ -21,7 +28,7 @@ function playGame() {
     const result = document.getElementById("result");
     const humanScoreDisplay = document.getElementById("humanScore");
     const computerScoreDisplay = document.getElementById("playerScore");
-    const final = document.getElementById("final");
+    const winner = document.getElementById("winner");
 
 
     function playRound(humanChoice) {
@@ -44,26 +51,16 @@ function playGame() {
         
         humanScoreDisplay.textContent = `You: ${humanScore}`;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
-
-        roundsPlayed++;
     }
 
-    if (roundsPlayed === 5) {
-        if (humanScore === computerScore) {
-            final.textContent = "After five rounds, you tied with the computer.";
-        } else if(humanScore > computerScore) {
-            final.textContent = "After five rounds, you beat the computer.";
+    if (humanScore === 5 || computerScore === 5) {
+        if (humanScore > computerScore) {
+            winner.textContent = "You reached 5 points. You beat the computer.";
         } else {
-            final.textContent = "After five rounds, you lost to the computer.";
+            winner.textContent = "The computer reached 5 points. You lost to the computer.";
         }
     }
 }
    
-const btnRock = document.getElementById("rock");
-const btnPaper = document.getElementById("paper");
-const btnScissors = document.getElementById("scissors");
 
-btnRock.addEventListener("click", playRound("Rock"));
-btnPaper.addEventListener("click", playRound("Paper"));
-btnScissors.addEventListener("click", playRound("Scissors"));
 
