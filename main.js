@@ -51,13 +51,13 @@ function playGame() {
         
         humanScoreDisplay.textContent = `You: ${humanScore}`;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
-    }
 
-    if (humanScore === 5 || computerScore === 5) {
-        if (humanScore > computerScore) {
-            winner.textContent = "You reached 5 points. You beat the computer.";
-        } else {
-            winner.textContent = "The computer reached 5 points. You lost to the computer.";
+        if (humanScore === 5 || computerScore === 5) {
+            if (humanScore > computerScore) {
+                winner.textContent = "You reached 5 points. You beat the computer.";
+            } else {
+                winner.textContent = "The computer reached 5 points. You lost to the computer.";
+            }
         }
     }
 }
