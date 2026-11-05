@@ -26,14 +26,10 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
-    let humanSelection;
-    let computerSelection;
-
     const result = document.getElementById("result");
     const humanScoreDisplay = document.getElementById("humanScore");
     const computerScoreDisplay = document.getElementById("playerScore");
     const winner = document.getElementById("winner");
-
 
     function playRound(humanChoice) {
         const computerChoice = getComputerChoice();
