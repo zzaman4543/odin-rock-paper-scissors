@@ -22,22 +22,24 @@ function playGame() {
     let humanSelection;
     let computerSelection;
 
+    const result = document.getElementById("result");
+
     function playRound(humanChoice, computerChoice) {
         let capitalHumanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.substring(1).toLowerCase();
         let capitalComputerChoice = computerChoice;
 
         if (capitalHumanChoice === capitalComputerChoice) {
-            console.log(`You tied. You both chose ${capitalHumanChoice}.`);
+            result.textContent = `You tied. You both chose ${capitalHumanChoice}.`;
 
         } else if (capitalHumanChoice === "Rock" && capitalComputerChoice === "Scissors" ||
                 capitalHumanChoice === "Paper" && capitalComputerChoice === "Rock" ||
                 capitalHumanChoice === "Scissors" && capitalComputerChoice === "Paper") {
 
-            console.log(`You won. ${capitalHumanChoice} beats ${capitalComputerChoice}.`);
+            result.textContent = `You won. ${capitalHumanChoice} beats ${capitalComputerChoice}.`;
             humanScore++;
 
         } else {
-            console.log(`You lost. ${capitalComputerChoice} beats ${capitalHumanChoice}.`);
+            result.textContent = `You lost. ${capitalHumanChoice} is beaten by ${capitalComputerChoice}.`;
             computerScore++;
         }
         
