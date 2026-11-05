@@ -22,11 +22,15 @@ function playGame() {
     let humanSelection;
     let computerSelection;
 
-    const result = document.getElementById("result");
 
     function playRound(humanChoice, computerChoice) {
         let capitalHumanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.substring(1).toLowerCase();
         let capitalComputerChoice = computerChoice;
+
+        const result = document.getElementById("result");
+        const humanScoreDisplay = document.getElementById("humanScore");
+        const computerScoreDisplay = document.getElementById("playerScore");
+
 
         if (capitalHumanChoice === capitalComputerChoice) {
             result.textContent = `You tied. You both chose ${capitalHumanChoice}.`;
@@ -43,8 +47,8 @@ function playGame() {
             computerScore++;
         }
         
-        console.log(`You: ${humanScore}`);
-        console.log(`Computer: ${computerScore}`);
+        humanScoreDisplay.textContent = `You: ${humanScore}`;
+        computerScoreDisplay.textContent = `Computer: ${computerScore}`;
     }
 }
    
