@@ -18,36 +18,33 @@ function getHumanChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    let roundsPlayed = 0;
 
     let humanSelection;
     let computerSelection;
 
-    let roundsPlayed = 0;
-
+    const result = document.getElementById("result");
+    const humanScoreDisplay = document.getElementById("humanScore");
+    const computerScoreDisplay = document.getElementById("playerScore");
     const final = document.getElementById("final");
 
 
-    function playRound(humanChoice, computerChoice) {
+    function playRound(humanChoice) {
         let capitalHumanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.substring(1).toLowerCase();
-        let capitalComputerChoice = computerChoice;
+        let computerChoice = getComputerChoice();
 
-        const result = document.getElementById("result");
-        const humanScoreDisplay = document.getElementById("humanScore");
-        const computerScoreDisplay = document.getElementById("playerScore");
-
-
-        if (capitalHumanChoice === capitalComputerChoice) {
+        if (capitalHumanChoice === computerChoice) {
             result.textContent = `You tied. You both chose ${capitalHumanChoice}.`;
 
-        } else if (capitalHumanChoice === "Rock" && capitalComputerChoice === "Scissors" ||
-                capitalHumanChoice === "Paper" && capitalComputerChoice === "Rock" ||
-                capitalHumanChoice === "Scissors" && capitalComputerChoice === "Paper") {
+        } else if (capitalHumanChoice === "Rock" && computerChoice === "Scissors" ||
+                capitalHumanChoice === "Paper" && computerChoice === "Rock" ||
+                capitalHumanChoice === "Scissors" && computerChoice === "Paper") {
 
-            result.textContent = `You won. ${capitalHumanChoice} beats ${capitalComputerChoice}.`;
+            result.textContent = `You won. ${capitalHumanChoice} beats ${computerChoice}.`;
             humanScore++;
 
         } else {
-            result.textContent = `You lost. ${capitalHumanChoice} is beaten by ${capitalComputerChoice}.`;
+            result.textContent = `You lost. ${capitalHumanChoice} is beaten by ${computerChoice}.`;
             computerScore++;
         }
         
