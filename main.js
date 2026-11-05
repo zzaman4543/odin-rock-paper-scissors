@@ -22,6 +22,10 @@ function playGame() {
     let humanSelection;
     let computerSelection;
 
+    let roundsPlayed = 0;
+
+    const final = document.getElementById("final");
+
 
     function playRound(humanChoice, computerChoice) {
         let capitalHumanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.substring(1).toLowerCase();
@@ -49,6 +53,18 @@ function playGame() {
         
         humanScoreDisplay.textContent = `You: ${humanScore}`;
         computerScoreDisplay.textContent = `Computer: ${computerScore}`;
+
+        roundsPlayed++;
+    }
+
+    if (roundsPlayed === 5) {
+        if (humanScore === computerScore) {
+            final.textContent = "After five rounds, you tied with the computer.";
+        } else if(humanScore > computerScore) {
+            final.textContent = "After five rounds, you beat the computer.";
+        } else {
+            final.textContent = "After five rounds, you lost to the computer.";
+        }
     }
 }
    
