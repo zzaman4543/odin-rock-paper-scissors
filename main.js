@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let generatedNumber = Math.floor(Math.random() * 3);
+    const generatedNumber = Math.floor(Math.random() * 3);
 
     switch (generatedNumber) {
         case 0:
@@ -36,7 +36,7 @@ function playGame() {
 
 
     function playRound(humanChoice) {
-        let computerChoice = getComputerChoice();
+        const computerChoice = getComputerChoice();
 
         if (humanChoice === computerChoice) {
             result.textContent = `You tied. You both chose ${humanChoice}.`;
