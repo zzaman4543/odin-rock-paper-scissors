@@ -30,7 +30,7 @@ function playGame() {
 
     const result = document.getElementById("result");
     const humanScoreDisplay = document.getElementById("humanScore");
-    const computerScoreDisplay = document.getElementById("playerScore");
+    const computerScoreDisplay = document.getElementById("computerScore");
     const winner = document.getElementById("winner");
 
     function playRound(event) {
