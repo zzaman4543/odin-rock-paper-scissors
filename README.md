@@ -5,3 +5,5 @@
 ## Skills Gained
 
 Completing this project taught me the fundamentals of programming, which I applied though JavaScript. For example, I've learnt about variables, operators, data types, conditionals, and functions.
+
+After returning to this project, I've gotten to apply the very important skills of event handling and DOM manipulation.
