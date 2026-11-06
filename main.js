@@ -19,9 +19,9 @@ function playGame() {
     const btnPaper = document.getElementById("paper");
     const btnScissors = document.getElementById("scissors");
 
-    btnRock.addEventListener("click", playRound("Rock"));
-    btnPaper.addEventListener("click", playRound("Paper"));
-    btnScissors.addEventListener("click", playRound("Scissors"));
+    btnRock.addEventListener("click", playRound);
+    btnPaper.addEventListener("click", playRound);
+    btnScissors.addEventListener("click", playRound);
 
     let humanScore = 0;
     let computerScore = 0;
@@ -31,7 +31,17 @@ function playGame() {
     const computerScoreDisplay = document.getElementById("playerScore");
     const winner = document.getElementById("winner");
 
-    function playRound(humanChoice) {
+    function playRound(event) {
+        let humanChoice;
+
+        if (event.target.id === "rock") {
+            humanChoice = "Rock";
+        } else if (event.target.id === "paper") {
+            humanChoice = "Paper";
+        } else {
+            humanChoice = "Scissors";
+        }
+
         const computerChoice = getComputerChoice();
 
         if (humanChoice === computerChoice) {
@@ -61,6 +71,5 @@ function playGame() {
         }
     }
 }
-   
 
 
