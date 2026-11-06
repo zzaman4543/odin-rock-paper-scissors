@@ -1,3 +1,5 @@
+playGame();
+
 function getComputerChoice() {
     const generatedNumber = Math.floor(Math.random() * 3);
 
@@ -71,5 +73,4 @@ function playGame() {
         }
     }
 }
-
 
